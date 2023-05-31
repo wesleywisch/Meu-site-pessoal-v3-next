@@ -2,6 +2,8 @@ import { Roboto_Flex as Roboto, IBM_Plex_Mono } from 'next/font/google'
 import { ReactNode } from 'react'
 
 import { Header } from '../components/Header'
+import { ContactForm } from '../components/ContactForm'
+import { Footer } from '../components/Footer'
 
 import '../styles/global.css'
 
@@ -18,7 +20,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="pt-BR" className={`${roboto.variable} ${plexMono.variable}`}>
       <body>
         <Header />
-        {children}
+        <main>
+          {children}
+          <ContactForm />
+        </main>
+        <Footer />
       </body>
     </html>
   )
