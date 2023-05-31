@@ -1,3 +1,11 @@
+import { HeroSection } from '../components/Pages/Home/HeroSection'
+import { KnownTechs } from '../components/Pages/Home/KnownTechs'
+
 export default function Home() {
-  return <h1>Hello world</h1>
+  return (
+    <>
+      <HeroSection />
+      <KnownTechs />
+    </>
+  )
 }

@@ -10,7 +10,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        'hero-image': "url('/images/hero-bg.png')",
+        'hero-image': "url('/imgs/hero-bg.jpg')",
       },
       fontFamily: {
         mono: ['var(--font-plex-mono)', 'monospace'],
