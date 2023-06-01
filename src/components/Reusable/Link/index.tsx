@@ -9,7 +9,7 @@ export function Link({ className, children, ...rest }: LinkProps) {
   return (
     <NextLink
       className={cn(
-        'flex items-center gap-2 text-gray-300 text-sm hover:text-emerald-500 transition-colors',
+        'flex items-center gap-2 text-sm text-gray-300 transition-colors hover:text-emerald-500',
         className,
       )}
       {...rest}

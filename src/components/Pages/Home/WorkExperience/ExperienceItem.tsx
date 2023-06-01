@@ -25,7 +25,7 @@ export function ExperienceItem() {
           <Link
             href="https://github.com/wesleywisch"
             target="_blank"
-            className="text-gray-500 hover:text-emerald-500 transition-colors"
+            className="text-gray-500 transition-colors hover:text-emerald-500"
           >
             @ Empresa x
           </Link>
@@ -40,11 +40,11 @@ export function ExperienceItem() {
           </p>
         </div>
 
-        <p className="text-gray-400 text-sm mb-3 mt-6 font-semibold">
+        <p className="mb-3 mt-6 text-sm font-semibold text-gray-400">
           Competências
         </p>
 
-        <div className="flex gap-x-2 gap-y-3 flex-wrap lg:max-w-[21.875rem] mb-8">
+        <div className="mb-8 flex flex-wrap gap-x-2 gap-y-3 lg:max-w-[21.875rem]">
           {Array.from({ length: 6 }).map((_, key) => (
             <TechBadge key={key} name="ReactJs" />
           ))}

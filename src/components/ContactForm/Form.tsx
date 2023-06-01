@@ -22,30 +22,31 @@ export function Form() {
   function onSubmit(data: ContactFormData) {
     console.log(data)
   }
+
   return (
     <form
-      className="mt-12 w-full flex flex-col gap-4"
+      className="mt-12 flex w-full flex-col gap-4"
       onSubmit={handleSubmit(onSubmit)}
     >
       <input
         placeholder="Nome"
-        className="w-full h-14 bg-gray-800 rounded-lg placeholder:text-gray-400 text-gray-50 p-4 focus:outline-none focus:ring-2 ring-emerald-600"
+        className="h-14 w-full rounded-lg bg-gray-800 p-4 text-gray-50 ring-emerald-600 placeholder:text-gray-400 focus:outline-none focus:ring-2"
         {...register('name')}
       />
       <input
         placeholder="E-mail"
         type="email"
-        className="w-full h-14 bg-gray-800 rounded-lg placeholder:text-gray-400 text-gray-50 p-4 focus:outline-none focus:ring-2 ring-emerald-600"
+        className="h-14 w-full rounded-lg bg-gray-800 p-4 text-gray-50 ring-emerald-600 placeholder:text-gray-400 focus:outline-none focus:ring-2"
         {...register('email')}
       />
       <textarea
         placeholder="Mensagem"
-        className="resize-none w-full h-[8.625rem] bg-gray-800 rounded-lg placeholder:text-gray-400 text-gray-50 p-4 focus:outline-none focus:ring-2 ring-emerald-600"
+        className="h-[8.625rem] w-full resize-none rounded-lg bg-gray-800 p-4 text-gray-50 ring-emerald-600 placeholder:text-gray-400 focus:outline-none focus:ring-2"
         maxLength={500}
         {...register('message')}
       />
 
-      <Button className="w-max mx-auto mt-6 shadow-button" type="submit">
+      <Button className="mx-auto mt-6 w-max shadow-button" type="submit">
         Enviar mensagem <HiArrowNarrowRight size={18} />
       </Button>
     </form>

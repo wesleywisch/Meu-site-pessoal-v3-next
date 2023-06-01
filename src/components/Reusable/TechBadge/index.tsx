@@ -4,7 +4,7 @@ type TechBadgeProps = {
 
 export function TechBadge({ name }: TechBadgeProps) {
   return (
-    <span className="text-emerald-400 bg-emerald-900/80 text-sm py-1 px-3 rounded-lg">
+    <span className="rounded-lg bg-emerald-900/80 px-3 py-1 text-sm text-emerald-400">
       {name}
     </span>
   )

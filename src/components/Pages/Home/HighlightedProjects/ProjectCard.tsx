@@ -6,19 +6,19 @@ import { Link } from '../../../Reusable/Link'
 
 export function ProjectCard() {
   return (
-    <div className="flex gap-6 lg:gap-12 flex-col lg:flex-row">
-      <div className="w-full h-full">
+    <div className="flex flex-col gap-6 lg:flex-row lg:gap-12">
+      <div className="h-full w-full">
         <Image
           src="https://mrconfeccoes.com.br/wp-content/uploads/2018/03/default.jpg"
           alt="image default"
           width={420}
           height={304}
-          className="w-full h-[12.5rem] sm:h-[18.75rem] lg:w-[26.25rem] lg:min-h-full object-cover rounded-lg"
+          className="h-[12.5rem] w-full rounded-lg object-cover sm:h-[18.75rem] lg:min-h-full lg:w-[26.25rem]"
         />
       </div>
 
       <div>
-        <h3 className="flex items-center gap-3 font-medium text-lg text-gray-50">
+        <h3 className="flex items-center gap-3 text-lg font-medium text-gray-50">
           <Image
             src="/imgs/project-icon.svg"
             alt="Icon"
@@ -28,7 +28,7 @@ export function ProjectCard() {
           Projeto 1
         </h3>
 
-        <p className="text-gray-400 my-6">
+        <p className="my-6 text-gray-400">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta
           aliquid quisquam autem libero nostrum maxime, ad porro corporis
           laborum asperiores? Consequuntur obcaecati facere assumenda iusto
@@ -37,7 +37,7 @@ export function ProjectCard() {
           perferendis. Enim veritatis voluptate dolores at!
         </p>
 
-        <div className="flex gap-x-2 gap-y-3 flex-wrap mb-8 lg:max-w-[21.875rem]">
+        <div className="mb-8 flex flex-wrap gap-x-2 gap-y-3 lg:max-w-[21.875rem]">
           {Array.from({ length: 8 }).map((_, key) => (
             <TechBadge key={key} name="NextJs" />
           ))}

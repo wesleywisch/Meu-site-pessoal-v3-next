@@ -6,6 +6,6 @@ type DividerHorizontalProps = {
 
 export function DividerHorizontal({ className }: DividerHorizontalProps) {
   return (
-    <div className={cn('w-full my-8 border-b border-b-gray-800', className)} />
+    <div className={cn('my-8 w-full border-b border-b-gray-800', className)} />
   )
 }

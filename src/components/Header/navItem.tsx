@@ -1,3 +1,4 @@
+'use client'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
@@ -17,7 +18,7 @@ export function NavItem({ href, label }: NavItemProps) {
     <Link
       href={href}
       className={cn(
-        'text-gray-400 flex items-center gap-2 font-medium font-mono',
+        'flex items-center gap-2 font-mono font-medium text-gray-400',
         isActive && 'text-gray-50',
       )}
     >

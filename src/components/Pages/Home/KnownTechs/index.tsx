@@ -8,7 +8,7 @@ export function KnownTechs() {
     <section className="container py-16">
       <SectionTitle title="Conhecimentos" subTitle="Competências" />
 
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(16.5rem,1fr))] gap-3 mt-[3.75rem]">
+      <div className="mt-[3.75rem] grid grid-cols-[repeat(auto-fit,minmax(16.5rem,1fr))] gap-3">
         {Array.from({ length: 8 }).map((_, key) => (
           <KnownTech
             key={key}
