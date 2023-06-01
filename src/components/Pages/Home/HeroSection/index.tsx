@@ -7,6 +7,8 @@ import { SiMicrosoftoutlook } from 'react-icons/si'
 import { TechBadge } from '../../../Reusable/TechBadge'
 import { ContactButton } from './ContactButton'
 
+import { HomePageInfo } from '../../../../types/PageInfoType'
+
 const Contacts = [
   {
     url: 'https://github.com/wesleywisch',
@@ -22,7 +24,11 @@ const Contacts = [
   },
 ]
 
-export function HeroSection() {
+type HeroSectionProps = {
+  heroInfo: HomePageInfo
+}
+
+export function HeroSection({ heroInfo }: HeroSectionProps) {
   return (
     <section className="flex w-full flex-col justify-end bg-hero-image bg-cover bg-center bg-no-repeat py-32 pb-10 sm:pb-32 lg:h-[47.1875rem] lg:pb-[6.875rem]">
       <div className="container flex flex-col-reverse items-start justify-between lg:flex-row">
@@ -37,8 +43,8 @@ export function HeroSection() {
           </p>
 
           <div className="flex flex-wrap gap-x-2 gap-y-3 lg:max-w-[21.25rem]">
-            {Array.from({ length: 7 }).map((_, key) => (
-              <TechBadge key={key} name="ReactJs" />
+            {heroInfo.technologies.map((tech, key) => (
+              <TechBadge key={key} name={tech.name} />
             ))}
           </div>
 
