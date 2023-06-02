@@ -1,23 +1,20 @@
-import { TbBrandNextjs } from 'react-icons/tb'
-
 import { SectionTitle } from '../../../Reusable/SectionTitle'
 import { KnownTech } from '../../../Reusable/KnownTech'
 
-export function KnownTechs() {
+import { knownTechs as IKnownTechs } from '../../../../types/Projects'
+
+type KnownTechsProps = {
+  techs: IKnownTechs[]
+}
+
+export function KnownTechs({ techs }: KnownTechsProps) {
   return (
     <section className="container py-16">
       <SectionTitle title="Conhecimentos" subTitle="Competências" />
 
       <div className="mt-[3.75rem] grid grid-cols-[repeat(auto-fit,minmax(16.5rem,1fr))] gap-3">
-        {Array.from({ length: 8 }).map((_, key) => (
-          <KnownTech
-            key={key}
-            tech={{
-              icon: <TbBrandNextjs size={22} />,
-              name: 'Next Js',
-              startDate: '2022-05-31',
-            }}
-          />
+        {techs.map((tech, key) => (
+          <KnownTech key={key} tech={tech} />
         ))}
       </div>
     </section>

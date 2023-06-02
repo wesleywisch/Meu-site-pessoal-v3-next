@@ -5,18 +5,24 @@ import { DividerHorizontal } from '../../../Reusable/Divider'
 import { Link } from '../../../Reusable/Link'
 import { ProjectCard } from './ProjectCard'
 
-export function HighlightedProjects() {
+import { Project } from '../../../../types/Projects'
+
+type HighlightedProjectsProps = {
+  projects: Project[]
+}
+
+export function HighlightedProjects({ projects }: HighlightedProjectsProps) {
   return (
     <section className="container py-16">
       <SectionTitle title="Projetos em destaque" subTitle="Destaques" />
       <DividerHorizontal className="mb-16" />
 
       <div>
-        {Array.from({ length: 2 }).map((_, key) => (
-          <>
-            <ProjectCard key={key} />
+        {projects?.map((project, key) => (
+          <div key={key}>
+            <ProjectCard project={project} />
             <DividerHorizontal className="my-16" />
-          </>
+          </div>
         ))}
 
         <p className="flex items-center gap-1.5">
