@@ -1,9 +1,4 @@
-import { HomePageData } from '../types/PageInfoType'
-
-export async function fetchHygraphQuery(
-  query: string,
-  revalidate?: number,
-): Promise<HomePageData> {
+export async function fetchHygraphQuery(query: string, revalidate?: number) {
   const response = await fetch(process.env.HYGRAPH_URL!, {
     method: 'POST',
     headers: {

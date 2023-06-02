@@ -11,3 +11,11 @@ export type HomePageData = {
   pageHome: HomePageInfo
   workExperiences: WorkExperience[]
 }
+
+export type ProjectsPageData = {
+  projects: Project[]
+}
+
+export type ProjectPageData = {
+  project: Project
+}

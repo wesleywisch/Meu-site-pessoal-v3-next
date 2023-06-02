@@ -6,13 +6,17 @@ import { WorkExperience } from '../components/Pages/Home/WorkExperience'
 import { fetchHygraphQuery } from '../lib/fetchHygraphQuery'
 import { QueryGetPageHome } from '../lib/Queries'
 
-export default async function Home() {
-  const { pageHome: pageData, workExperiences } = await fetchHygraphQuery(
+import { HomePageData } from '../types/PageInfoType'
+
+async function getData(): Promise<HomePageData> {
+  return fetchHygraphQuery(
     QueryGetPageHome,
     60 * 60 * 24, // 1 day
   )
+}
 
-  console.log(pageData)
+export default async function Home() {
+  const { pageHome: pageData, workExperiences } = await getData()
 
   return (
     <>

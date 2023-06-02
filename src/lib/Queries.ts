@@ -39,3 +39,19 @@ query PageInfoQuery {
   }
 }
 `
+
+export const QueryGetProjects = `
+query ProjectsQuery {
+  projects {
+    shortDescription
+    slug
+    title
+    thumbnail {
+      url
+    }
+    technologies {
+      name
+    }
+  }
+}
+`
