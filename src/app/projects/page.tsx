@@ -7,7 +7,7 @@ import { QueryGetProjects } from '../../lib/Queries'
 import { ProjectsPageData } from '../../types/PageInfoType'
 
 async function getProjects(): Promise<ProjectsPageData> {
-  return fetchHygraphQuery(
+  return fetchHygraphQuery<ProjectsPageData>(
     QueryGetProjects,
     60 * 60 * 24, // 1 day
   )
