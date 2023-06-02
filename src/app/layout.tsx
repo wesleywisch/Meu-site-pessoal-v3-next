@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import { Roboto_Flex as Roboto, IBM_Plex_Mono } from 'next/font/google'
 import { ReactNode } from 'react'
 
@@ -5,6 +6,7 @@ import { Header } from '../components/Header'
 import { ContactForm } from '../components/ContactForm'
 import { Footer } from '../components/Footer'
 import { BackToTop } from '../components/BackToTop'
+import { Toaster } from '../components/Toaster'
 
 import '../styles/global.css'
 
@@ -15,6 +17,13 @@ const plexMono = IBM_Plex_Mono({
   subsets: ['latin'],
   weight: ['400', '500'],
 })
+
+export const metadata: Metadata = {
+  title: {
+    default: 'Meu portfólio | Wesley Wisch',
+    template: '%s | Wesley Wisch'
+  },
+}
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
@@ -27,6 +36,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <BackToTop />
         </main>
         <Footer />
+        <Toaster />
       </body>
     </html>
   )
