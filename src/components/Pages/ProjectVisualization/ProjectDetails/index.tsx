@@ -69,7 +69,7 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
         )}
 
         {project.onlineProjectUrl && (
-          <Link href={'https://github.com/wesleywisch'} target="_blank">
+          <Link href={project.onlineProjectUrl} target="_blank">
             <Button className="min-w-[11.25rem]">
               <FiGlobe size={20} />
               Projeto Online
