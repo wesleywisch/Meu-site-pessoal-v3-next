@@ -4,9 +4,12 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import axios from 'axios'
+import { motion } from 'framer-motion'
 import { toast } from 'react-hot-toast'
 
 import { Button } from '../Reusable/Button'
+
+import { fadeUpAnimation } from '../../lib/animations'
 
 const contactFormSchema = z.object({
   name: z.string().min(3).max(100),
@@ -32,9 +35,10 @@ export function Form() {
   }
 
   return (
-    <form
+    <motion.form
       className="mt-12 flex w-full flex-col gap-4"
       onSubmit={handleSubmit(onSubmit)}
+      {...fadeUpAnimation}
     >
       <input
         placeholder="Nome"
@@ -57,6 +61,6 @@ export function Form() {
       <Button className="mx-auto mt-6 w-max shadow-button" type="submit" disabled={isSubmitting}>
         Enviar mensagem <HiArrowNarrowRight size={18} />
       </Button>
-    </form>
+    </motion.form>
   )
 }
