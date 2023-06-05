@@ -24,8 +24,8 @@ export function Header() {
       transition={{ duration: 0.5 }}
     >
       <div className="container flex items-center justify-between">
-        <Link href="/" className="font-roboto text-3xl text-gray-300">
-          Wesley Wisch
+        <Link href="/" className="font-roboto text-xl sm:text-3xl text-gray-100">
+          <h1>Wesley Wisch</h1>
         </Link>
 
         <nav className="flex items-center gap-4 sm:gap-10">

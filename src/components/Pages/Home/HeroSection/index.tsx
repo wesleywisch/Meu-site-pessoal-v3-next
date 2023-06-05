@@ -71,7 +71,7 @@ export function HeroSection({ heroInfo }: HeroSectionProps) {
                   key={key}
                   href={contact.url}
                   target="_blank"
-                  className="transition-colors hover:text-gray-100"
+                  className="transition-all hover:text-gray-100 hover:scale-125"
                 >
                   {contact.icon}
                 </Link>

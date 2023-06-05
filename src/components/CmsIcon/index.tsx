@@ -8,6 +8,9 @@ export const CMSIcon = ({ icon }: CMSIconProps) => {
       dangerouslySetInnerHTML={{
         __html: icon,
       }}
+      style={{
+        fontSize: 22
+      }}
     />
   )
 }

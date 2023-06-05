@@ -23,6 +23,10 @@ export const metadata: Metadata = {
     default: 'Meu portfólio | Wesley Wisch',
     template: '%s | Wesley Wisch'
   },
+  description: 'Sou um desenvolvedor Front-End Júnior e aqui apresento alguns projetos desenvolvidos por mim!',
+  openGraph: {
+    images: '/imgs/ogimage.png',
+  },
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
