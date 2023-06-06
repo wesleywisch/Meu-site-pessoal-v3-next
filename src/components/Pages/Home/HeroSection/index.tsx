@@ -46,7 +46,7 @@ export function HeroSection({ heroInfo }: HeroSectionProps) {
           <h2 className="mt-2 text-4xl font-medium">Wesley Wisch</h2>
 
           <p className="my-6 text-sm text-gray-400 sm:text-base">
-            Olá, meu nme é Wesley Wisch e sou um desenvolvedor Front-End júnior.
+            Sou um desenvolvedor Front-End júnior.
             Meu objetivo é criar interfaces de usuários bonitas e funcionais.
             Estou sempre aberto a novas oportunidades e desafios.
           </p>
@@ -91,6 +91,7 @@ export function HeroSection({ heroInfo }: HeroSectionProps) {
             width={420}
             height={404}
             src="/imgs/profile.jpg"
+            priority
             alt="Foto de perfil"
             className="mb-6 h-[300px] w-[300px] rounded-lg object-cover shadow-2xl lg:mb-0 lg:h-[404px] lg:w-[420px]"
           />

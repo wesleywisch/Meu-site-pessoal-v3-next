@@ -44,6 +44,7 @@ export const QueryGetProjects = `
 query ProjectsQuery {
   projects {
     shortDescription
+    type
     slug
     title
     thumbnail {

@@ -15,6 +15,7 @@ export type ProjectSection = {
 
 export type Project = {
   slug: string
+  type: string;
   thumbnail: {
     url: string
   }

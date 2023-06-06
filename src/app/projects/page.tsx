@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 async function getProjects(): Promise<ProjectsPageData> {
   return fetchHygraphQuery<ProjectsPageData>(
     QueryGetProjects,
-    60 * 60 * 24, // 1 day
+    60 * 60 * 24 * 7, // 7 day
   )
 }
 

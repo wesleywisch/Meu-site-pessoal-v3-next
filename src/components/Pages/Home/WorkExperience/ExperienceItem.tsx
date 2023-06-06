@@ -45,11 +45,12 @@ export function ExperienceItem({ experience }: ExperienceItemProps) {
             href={experience.companyUrl}
             target="_blank"
             className="text-gray-500 transition-colors hover:text-emerald-500"
+            title={experience.companyName}
           >
             @ {experience.companyName}
           </Link>
 
-          <h4 className="text-gray-300">{experience.role}</h4>
+          <h4 className="text-gray-300" title={experience.role}>{experience.role}</h4>
           <DurationDateWork
             workEndDate={experience.endDate}
             workStartDate={experience.startDate}

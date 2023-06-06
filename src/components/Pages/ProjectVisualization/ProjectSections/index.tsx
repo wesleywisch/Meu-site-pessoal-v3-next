@@ -28,7 +28,7 @@ export function ProjectSections({ sections }: ProjectSectionsProps) {
             alt={`Imagem da seção ${section.title}`}
             width={1080}
             height={672}
-            className="aspect-auto w-full rounded-lg object-cover"
+            className="aspect-auto w-full rounded-lg object-cover h-auto"
             unoptimized
           />
         </motion.div>

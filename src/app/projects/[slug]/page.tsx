@@ -48,7 +48,7 @@ async function getProjectDetails(slug: string): Promise<ProjectPageData> {
 
   const data = fetchHygraphQuery<ProjectPageData>(
     query,
-    60 * 60 * 24, // 1 day
+    60 * 60 * 24 * 7, // 7 day
   )
 
   return data
@@ -68,7 +68,7 @@ export default async function ProjectVisualization({ params }: ProjectProps) {
 export async function generateStaticParams() {
   const query = `
     query ProjectsSlugsQuery() {
-      projects(first: 20) {
+      projects(first: 35) {
         slug
       }
     }

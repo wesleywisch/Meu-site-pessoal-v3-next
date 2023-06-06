@@ -11,7 +11,7 @@ import { HomePageData } from '../types/PageInfoType'
 async function getData(): Promise<HomePageData> {
   return fetchHygraphQuery<HomePageData>(
     QueryGetPageHome,
-    60 * 60 * 24, // 1 day
+    60 * 60 * 24 * 7, // 7 day
   )
 }
 

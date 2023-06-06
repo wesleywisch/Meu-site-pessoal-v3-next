@@ -21,11 +21,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
       </div>
 
       <div className="flex flex-1 flex-col p-8">
-        <strong className="font-medium text-gray-50/90 transition-all group-hover:text-emerald-500">
+        <strong title={project.title} className="font-medium text-gray-50/90 transition-all group-hover:text-emerald-500">
           {project.title}
         </strong>
 
-        <p className="mt-2 line-clamp-4 text-gray-400">
+        <p className="mt-2 line-clamp-4 text-gray-400" title={project.shortDescription}>
           {project.shortDescription}
         </p>
 
