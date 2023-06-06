@@ -42,7 +42,7 @@ query PageInfoQuery {
 
 export const QueryGetProjects = `
 query ProjectsQuery {
-  projects {
+  projects (first: 20) {
     shortDescription
     type
     slug
